@@ -21,4 +21,116 @@ body {
   font-family: var(--font);
   font-size: 0.75rem;
 }
+
+a, a:hover, a:active {
+  text-decoration: none;
+}
+
+@media (max-width: 74.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 75em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.container {
+  padding: 0 1.5rem;
+}
+
+.header {
+  background-image: url(images/mobile-image-hero-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 22.5rem;
+  position: relative;
+  padding-top: 3rem;
+}
+.header__logo {
+  text-align: center;
+}
+.header ul {
+  list-style: none;
+  margin-right: 0;
+}
+.header ul li {
+  display: inline;
+}
+.header__toggle {
+  position: absolute;
+  top: 3rem;
+  z-index: 2;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+.header__toggle span {
+  display: block;
+  background-color: var(--white);
+  height: 0.125rem;
+  width: 1.25rem;
+  transform-origin: 0.125rem;
+}
+.header__toggle span:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+.header__toggle.open span {
+  background-color: var(--darkGray);
+  border-radius: 0.1875rem;
+}
+.header__toggle.open span:first-child {
+  transform: rotate(48deg);
+}
+.header__toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.header__toggle.open span:last-child {
+  transform: rotate(-48deg);
+}
+.header__menu {
+  position: absolute;
+  left: -100%;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 1.5rem;
+  background-color: var(--white);
+  height: 6.9375rem;
+  width: 100%;
+  transition: all 250ms ease-in-out;
+}
+.header__menu.open {
+  left: 0;
+}
+.header__menu ul {
+  margin-left: 0;
+}
+.header__menu li:not(:last-child) {
+  margin-right: 2.0625rem;
+}
+.header__menu a {
+  color: var(--black);
+  font-weight: 700;
+  text-transform: lowercase;
+}
+.header__slide-control {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--black);
+  width: 7rem;
+  height: 3.5rem;
+}
+.header__slide-control img {
+  height: 1.125rem;
+}
 /*# sourceMappingURL=style.css.map */

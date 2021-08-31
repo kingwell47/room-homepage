@@ -26,3 +26,26 @@ body {
     font-family: var(--font);
     font-size: fnc.rem(12);
 }
+
+a, a:hover, a:active {
+    text-decoration: none;
+}
+
+//Visibility
+.hide-for-mobile {
+    //hide for tablet or mobile
+    @include mix.breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    //hide for desktop or laptop
+    @include mix.breakpoint-up(large) {
+        display: none;
+    }
+}
+
+.container {
+    padding: 0 fnc.rem(24);
+}

@@ -1,0 +1,127 @@
+@use "functions" as fnc;
+@use "breakpoints" as mix;
+
+.header {
+    background-image: url(images/mobile-image-hero-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: fnc.rem(360);
+    position: relative;
+    padding-top: fnc.rem(48);
+
+    &__logo {
+        text-align: center;
+    }
+
+    ul {
+        list-style: none;
+        margin-right: 0;
+
+        li {
+            display: inline;
+        }
+    }
+
+    &__nav {
+
+    }
+
+    &__toggle {
+        position: absolute;
+        top: fnc.rem(48);
+        z-index: 2;
+        cursor: pointer;
+        transition: all 250ms ease-in-out;
+
+         span {
+            display: block;
+            background-color: var(--white);
+            height: fnc.rem(2);
+            width: fnc.rem(20);
+            transform-origin: fnc.rem(2);
+
+            &:not(:last-child) {
+                margin-bottom: fnc.rem(4);
+            }
+        }
+
+         &.open {
+            span {
+                background-color: var(--darkGray);
+                border-radius: fnc.rem(3);
+
+                &:first-child {
+                    transform: rotate(48deg);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:last-child {
+                    transform: rotate(-48deg);
+                }
+
+            }
+        }
+
+    }
+
+    &__menu {
+        position: absolute;
+        left: -100%;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 fnc.rem(24);
+        background-color: var(--white);
+        height: fnc.rem(111);
+        width: 100%;
+        transition: all 250ms ease-in-out;
+
+        &.open {
+            left: 0;
+        }
+        
+        ul {
+            margin-left: 0;
+        }
+
+        li {
+            &:not(:last-child) {
+                margin-right: fnc.rem(33);
+            }
+        }
+        
+        a {
+            color: var(--black);
+            font-weight: 700;
+            text-transform: lowercase;            
+        }
+    }
+
+    &__links {
+
+
+    }
+
+    &__slide-control {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;        
+        background-color: var(--black);
+        width: fnc.rem(112);
+        height: fnc.rem(56);
+
+        img {
+            height: fnc.rem(18);
+        }
+
+    }
+}
