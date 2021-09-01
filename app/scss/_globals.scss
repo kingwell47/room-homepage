@@ -25,6 +25,10 @@ body {
     margin: 0;
     font-family: var(--font);
     font-size: fnc.rem(12);
+
+    &.open {
+        overflow: hidden;
+    }
 }
 
 a, a:hover, a:active {
