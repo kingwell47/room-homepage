@@ -7,10 +7,18 @@ const previousBtn = document.querySelector(".arrow-left");
 const nextBtn = document.querySelector(".arrow-right");
 
 btnHamburger.addEventListener("click", ()=>{
-    btnHamburger.classList.toggle("open");
+    btnHamburger.classList.toggle("open");    
     btnMenu.classList.toggle("open");
     body.classList.toggle("open");
     overlay.classList.toggle("open");
+
+    let x = btnHamburger.ariaExpanded;
+    if (x == "true") {
+        x = "false";
+    } else {
+        x = "true";
+    }
+    btnHamburger.ariaExpanded = x;
 })
 
 let count = 0;
