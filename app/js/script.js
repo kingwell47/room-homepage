@@ -26,7 +26,6 @@ let count = 0;
 
 previousBtn.addEventListener('click', ()=>{
     count--;
-    console.log(count);
     if (count < 0) {
         count = 2;
     }
@@ -35,7 +34,6 @@ previousBtn.addEventListener('click', ()=>{
 
 nextBtn.addEventListener('click', ()=>{
     count++;
-    console.log(count);
     if (count > 2) {
         count = 0;
     }
@@ -43,12 +41,17 @@ nextBtn.addEventListener('click', ()=>{
 })
 
 function navigateSlides() {
+    slides.classList.remove("animated");
+    textSlides.classList.remove("animated");
+    
     if (count <= 2) {
         slides.style.marginLeft = (count * -100)+ "%";
         textSlides.style.marginLeft = (count * -100)+ "%";
+        
     } else if (count <= 0) {
-        count = 0;
         slides.style.marginLeft = "";
         textSlides.style.marginLeft = "";
     }
 }
+
+

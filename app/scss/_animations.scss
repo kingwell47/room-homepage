@@ -1,0 +1,49 @@
+//Fade animations from The Coder Coder
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+//Animation to slide automatically at first load
+@keyframes slideAnimation {
+  0% {
+    margin-left: 0%;
+  }
+
+  33% {
+    margin-left: -100%;
+  }
+
+  66% {
+    margin-left: -200%;
+  }
+
+  100% {
+    margin-left: 0%;
+  }
+}

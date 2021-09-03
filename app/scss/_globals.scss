@@ -68,3 +68,7 @@ a:active {
     justify-content: center;
   }
 }
+
+.animated {
+  animation: slideAnimation 15s infinite;
+}

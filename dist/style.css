@@ -61,6 +61,11 @@ a:active {
   }
 }
 
+.animated {
+  -webkit-animation: slideAnimation 15s infinite;
+          animation: slideAnimation 15s infinite;
+}
+
 .header {
   flex: 1 0.75 52.5rem;
   min-height: 22.5rem;
@@ -191,62 +196,6 @@ a:active {
 @media (min-width: 75em) {
   .header .overlay.open {
     display: none;
-  }
-}
-@-webkit-keyframes fade-in {
-  from {
-    visibility: hidden;
-    opacity: 0;
-  }
-  1% {
-    visibility: visible;
-    opacity: 0;
-  }
-  to {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-@keyframes fade-in {
-  from {
-    visibility: hidden;
-    opacity: 0;
-  }
-  1% {
-    visibility: visible;
-    opacity: 0;
-  }
-  to {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fade-out {
-  from {
-    visibility: visible;
-    opacity: 1;
-  }
-  99% {
-    visibility: visible;
-    opacity: 0;
-  }
-  to {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
-@keyframes fade-out {
-  from {
-    visibility: visible;
-    opacity: 1;
-  }
-  99% {
-    visibility: visible;
-    opacity: 0;
-  }
-  to {
-    visibility: hidden;
-    opacity: 0;
   }
 }
 .header__menu {
@@ -475,5 +424,91 @@ a:active {
 .footer__paragraph {
   color: var(--darkGray);
   line-height: 1.5;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes slideAnimation {
+  0% {
+    margin-left: 0%;
+  }
+  33% {
+    margin-left: -100%;
+  }
+  66% {
+    margin-left: -200%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
+@keyframes slideAnimation {
+  0% {
+    margin-left: 0%;
+  }
+  33% {
+    margin-left: -100%;
+  }
+  66% {
+    margin-left: -200%;
+  }
+  100% {
+    margin-left: 0%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
