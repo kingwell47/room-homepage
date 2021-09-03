@@ -329,13 +329,26 @@ a, a:hover, a:active {
   height: 1.125rem;
 }
 
+.cta {
+  max-width: 37.5rem;
+  max-height: 33.375rem;
+}
+.cta__slider {
+  width: 100%;
+  overflow: hidden;
+}
+.cta__slides {
+  display: flex;
+  width: 300%;
+  transition: all 250ms ease-in-out;
+}
+
 .cta-card {
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 37.5rem;
-  max-height: 33.375rem;
   padding-top: 4.5625rem;
   padding-bottom: 4.5625rem;
 }

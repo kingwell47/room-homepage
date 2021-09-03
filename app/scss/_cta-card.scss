@@ -1,13 +1,32 @@
 @use "functions" as fnc;
 @use "breakpoints" as mix;
 
+
+.cta {
+    max-width: fnc.rem(600);
+    max-height: fnc.rem(534);
+    
+    &__slider {
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    &__slides {
+        display: flex;
+        width: 300%;
+        transition: all 250ms ease-in-out;
+    }
+
+}
+
+
 .cta-card {
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: fnc.rem(600);
-    max-height: fnc.rem(534);
+
     padding-top: fnc.rem(73);
     padding-bottom: fnc.rem(73);
 

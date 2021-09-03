@@ -3,6 +3,7 @@ const overlay = document.querySelector(".overlay");
 const btnHamburger = document.querySelector(".header__toggle");
 const btnMenu = document.querySelector(".header__menu");
 const slides = document.querySelector(".header__slides");
+const textSlides = document.querySelector(".cta__slides");
 const previousBtn = document.querySelector(".arrow-left");
 const nextBtn = document.querySelector(".arrow-right");
 
@@ -44,8 +45,10 @@ nextBtn.addEventListener('click', ()=>{
 function navigateSlides() {
     if (count <= 2) {
         slides.style.marginLeft = (count * -100)+ "%";
+        textSlides.style.marginLeft = (count * -100)+ "%";
     } else if (count <= 0) {
         count = 0;
         slides.style.marginLeft = "";
+        textSlides.style.marginLeft = "";
     }
 }
