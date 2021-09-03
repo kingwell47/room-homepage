@@ -2,29 +2,26 @@
 @use "breakpoints" as mix;
 
 .header {
+    flex: 1 0.75 fnc.rem(840);
     min-height: fnc.rem(360);
+    // max-width: fnc.rem(840);
     position: relative;
     padding-top: fnc.rem(48);
 
     @include mix.breakpoint-up(large) {
-        min-height: fnc.rem(534);
-        max-width: fnc.rem(840);
+        min-height: fnc.rem(534);        
         padding-left: fnc.rem(62);
     }
 
 
     //Slider Styles
     &__slider {
-        width: 100vw;
+        width: 100%;
         overflow: hidden;
         position: absolute;
         left: 0;
         top: 0;
         z-index: -1;
-
-        @include mix.breakpoint-up(medium) {
-            max-width: fnc.rem(840);
-        }
     }
 
     &__slides {        
@@ -35,7 +32,7 @@
 
     &__slide {        
         min-height: fnc.rem(360);
-        width: 100vw;
+        width: 100%;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
@@ -68,7 +65,7 @@
     //End of Slider Styles
 
     &__nav {
-        @include mix.breakpoint-up(medium) {
+        @include mix.breakpoint-up(large) {
             display: flex;
             align-items: center;
             gap: fnc.rem(55);
@@ -79,7 +76,7 @@
     &__logo {
         text-align: center;
 
-        @include mix.breakpoint-up(medium) {
+        @include mix.breakpoint-up(large) {
             text-align: left;
         }
     }
@@ -206,10 +203,12 @@
         }
         
         ul {
+            list-style: none;
             margin-left: 0;
         }
         
         li {
+            display: inline;
             &:not(:last-child) {
                 margin-right: fnc.rem(33);
             }
@@ -237,6 +236,7 @@
                     margin-right: fnc.rem(33);
                 }
 
+
                 a {
                     color: var(--white);
                     text-transform: lowercase;                    
@@ -251,7 +251,7 @@
     
     &__slide-control {
         position: absolute;
-        right: 0;
+        right: fnc.rem(-160);
         bottom: 0;
         display: flex;
         justify-content: space-around;
@@ -259,9 +259,14 @@
         background-color: var(--black);
         width: fnc.rem(112);
         height: fnc.rem(56);
-
+        
+        @include mix.breakpoint-down(large){
+            right: 0;
+        }
+        
         @include mix.breakpoint-up(large) {
-            right: fnc.rem(-112);
+            height: fnc.rem(80);
+            width: fnc.rem(160);
         }
         
 

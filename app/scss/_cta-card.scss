@@ -6,13 +6,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: fnc.rem(600);
+    max-height: fnc.rem(534);
     padding-top: fnc.rem(73);
     padding-bottom: fnc.rem(73);
+
+    @include mix.breakpoint-up(large) {
+        padding: fnc.rem(96);
+        
+    }
 
     &__heading {
         font-size: fnc.rem(27);
         margin-top: 0;
         margin-bottom: fnc.rem(5);
+        font-weight: 600;
+
+        @include mix.breakpoint-up(large) {
+            font-size: fnc.rem(38);
+        }
 
     }
 

@@ -29,13 +29,13 @@ a, a:hover, a:active {
   text-decoration: none;
 }
 
-@media (max-width: 52.4375em) {
+@media (max-width: 47.9375em) {
   .hide-for-mobile {
     display: none;
   }
 }
 
-@media (min-width: 52.5em) {
+@media (min-width: 48em) {
   .hide-for-desktop {
     display: none;
   }
@@ -45,30 +45,36 @@ a, a:hover, a:active {
   padding: 0 1.5rem;
 }
 
+.limit-wrapper {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+@media (min-width: 48em) {
+  .limit-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .header {
+  flex: 1 0.75 52.5rem;
   min-height: 22.5rem;
   position: relative;
   padding-top: 3rem;
 }
-@media (min-width: 52.5em) {
+@media (min-width: 48em) {
   .header {
     min-height: 33.375rem;
-    max-width: 52.5rem;
     padding-left: 3.875rem;
   }
 }
 .header__slider {
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   position: absolute;
   left: 0;
   top: 0;
   z-index: -1;
-}
-@media (min-width: 40em) {
-  .header__slider {
-    max-width: 52.5rem;
-  }
 }
 .header__slides {
   display: flex;
@@ -77,7 +83,7 @@ a, a:hover, a:active {
 }
 .header__slide {
   min-height: 22.5rem;
-  width: 100vw;
+  width: 100%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -91,7 +97,7 @@ a, a:hover, a:active {
 .header__slide#slide3 {
   background-image: url(images/mobile-image-hero-3.jpg);
 }
-@media (min-width: 52.5em) {
+@media (min-width: 48em) {
   .header__slide {
     min-height: 33.375rem;
   }
@@ -105,7 +111,7 @@ a, a:hover, a:active {
     background-image: url(images/desktop-image-hero-3.jpg);
   }
 }
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .header__nav {
     display: flex;
     align-items: center;
@@ -116,7 +122,7 @@ a, a:hover, a:active {
 .header__logo {
   text-align: center;
 }
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .header__logo {
     text-align: left;
   }
@@ -175,7 +181,7 @@ a, a:hover, a:active {
   -webkit-animation: fade-in 250ms ease-in-out forwards;
           animation: fade-in 250ms ease-in-out forwards;
 }
-@media (min-width: 52.5em) {
+@media (min-width: 48em) {
   .header .overlay.open {
     display: none;
   }
@@ -253,13 +259,17 @@ a, a:hover, a:active {
 .header__menu.open {
   top: 0;
 }
-@media (min-width: 52.5em) {
+@media (min-width: 48em) {
   .header__menu.open {
     display: none;
   }
 }
 .header__menu ul {
+  list-style: none;
   margin-left: 0;
+}
+.header__menu li {
+  display: inline;
 }
 .header__menu li:not(:last-child) {
   margin-right: 2.0625rem;
@@ -285,7 +295,7 @@ a, a:hover, a:active {
 }
 .header__slide-control {
   position: absolute;
-  right: 0;
+  right: -10rem;
   bottom: 0;
   display: flex;
   justify-content: space-around;
@@ -294,9 +304,15 @@ a, a:hover, a:active {
   width: 7rem;
   height: 3.5rem;
 }
-@media (min-width: 52.5em) {
+@media (max-width: 87.4375em) {
   .header__slide-control {
-    right: -7rem;
+    right: 0;
+  }
+}
+@media (min-width: 48em) {
+  .header__slide-control {
+    height: 5rem;
+    width: 10rem;
   }
 }
 .header__slide-control button {
@@ -318,13 +334,26 @@ a, a:hover, a:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 37.5rem;
+  max-height: 33.375rem;
   padding-top: 4.5625rem;
   padding-bottom: 4.5625rem;
+}
+@media (min-width: 48em) {
+  .cta-card {
+    padding: 6rem;
+  }
 }
 .cta-card__heading {
   font-size: 1.6875rem;
   margin-top: 0;
   margin-bottom: 0.3125rem;
+  font-weight: 600;
+}
+@media (min-width: 48em) {
+  .cta-card__heading {
+    font-size: 2.375rem;
+  }
 }
 .cta-card__paragraph {
   color: var(--darkGray);
