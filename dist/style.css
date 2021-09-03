@@ -89,7 +89,7 @@ a:active {
 .header__slides {
   display: flex;
   width: 300%;
-  transition: all 350ms ease-in-out;
+  transition: all 450ms ease-in-out;
 }
 .header__slide {
   min-height: 22.5rem;
@@ -321,7 +321,7 @@ a:active {
 .cta__slides {
   display: flex;
   width: 300%;
-  transition: all 350ms ease-in-out;
+  transition: all 450ms ease-in-out;
 }
 
 .cta-card {
@@ -480,34 +480,6 @@ a:active {
   to {
     visibility: hidden;
     opacity: 0;
-  }
-}
-@-webkit-keyframes slideAnimation {
-  0% {
-    margin-left: 0%;
-  }
-  33% {
-    margin-left: -100%;
-  }
-  66% {
-    margin-left: -200%;
-  }
-  100% {
-    margin-left: 0%;
-  }
-}
-@keyframes slideAnimation {
-  0% {
-    margin-left: 0%;
-  }
-  33% {
-    margin-left: -100%;
-  }
-  66% {
-    margin-left: -200%;
-  }
-  100% {
-    margin-left: 0%;
   }
 }
 /*# sourceMappingURL=style.css.map */

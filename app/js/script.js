@@ -7,6 +7,8 @@ const textSlides = document.querySelector(".cta__slides");
 const previousBtn = document.querySelector(".arrow-left");
 const nextBtn = document.querySelector(".arrow-right");
 
+
+
 btnHamburger.addEventListener("click", ()=>{
     btnHamburger.classList.toggle("open");    
     btnMenu.classList.toggle("open");
@@ -41,8 +43,8 @@ nextBtn.addEventListener('click', ()=>{
 })
 
 function navigateSlides() {
-    slides.classList.remove("animated");
-    textSlides.classList.remove("animated");
+    // slides.classList.remove("animated");
+    // textSlides.classList.remove("animated");
     
     if (count <= 2) {
         slides.style.marginLeft = (count * -100)+ "%";
@@ -53,5 +55,13 @@ function navigateSlides() {
         textSlides.style.marginLeft = "";
     }
 }
+
+const autoSlide = setInterval(()=>{
+    count++;
+    if (count > 2) {
+        count = 0;
+    }
+    navigateSlides();
+}, 10000);
 
 

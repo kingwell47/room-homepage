@@ -29,21 +29,20 @@
   }
 }
 
-//Animation to slide automatically at first load
-@keyframes slideAnimation {
-  0% {
-    margin-left: 0%;
-  }
+// //Animation to slide automatically at first load
+// @keyframes slideAnimation {
+//   0% {
+//     margin-left: 0%;
+//   }
 
-  33% {
-    margin-left: -100%;
-  }
+//   33% {
+//     margin-left: -100%;
 
-  66% {
-    margin-left: -200%;
-  }
+//   66% {
+//     margin-left: -200%;
+//   }
 
-  100% {
-    margin-left: 0%;
-  }
-}
+//   100% {
+//     margin-left: 0%;
+//   }
+// }
