@@ -2,286 +2,295 @@
 @use "breakpoints" as mix;
 
 .header {
-    flex: 1 0.75 fnc.rem(840);
+  flex: 1 0.75 fnc.rem(840);
+  min-height: fnc.rem(360);
+  position: relative;
+  padding-top: fnc.rem(48);
+
+  @include mix.breakpoint-up(large) {
+    min-height: fnc.rem(534);
+    padding-left: fnc.rem(62);
+  }
+
+  //Slider Styles
+  &__slider {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+  &__slides {
+    display: flex;
+    width: 300%;
+    transition: all 350ms ease-in-out;
+  }
+
+  &__slide {
     min-height: fnc.rem(360);
-    // max-width: fnc.rem(840);
-    position: relative;
-    padding-top: fnc.rem(48);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    &#slide1 {
+      background-image: url(images/mobile-image-hero-1.jpg);
+    }
+    &#slide2 {
+      background-image: url(images/mobile-image-hero-2.jpg);
+    }
+    &#slide3 {
+      background-image: url(images/mobile-image-hero-3.jpg);
+    }
 
     @include mix.breakpoint-up(large) {
-        min-height: fnc.rem(534);        
-        padding-left: fnc.rem(62);
+      min-height: fnc.rem(534);
     }
 
+    @include mix.breakpoint-up(medium) {
+      &#slide1 {
+        background-image: url(images/desktop-image-hero-1.jpg);
+      }
+      &#slide2 {
+        background-image: url(images/desktop-image-hero-2.jpg);
+      }
+      &#slide3 {
+        background-image: url(images/desktop-image-hero-3.jpg);
+      }
+    }
+  }
+  //End of Slider Styles
 
-    //Slider Styles
-    &__slider {
-        width: 100%;
-        overflow: hidden;
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: -1;
+  &__nav {
+    @include mix.breakpoint-up(large) {
+      display: flex;
+      align-items: center;
+      gap: fnc.rem(55);
+      padding: 0;
+    }
+  }
+
+  &__logo {
+    text-align: center;
+
+    @include mix.breakpoint-up(large) {
+      text-align: left;
+    }
+  }
+
+  //Mobile items Start
+  &__toggle {
+    position: absolute;
+    top: fnc.rem(40);
+    z-index: 3;
+    cursor: pointer;
+    background: transparent;
+    appearance: none;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+
+    span {
+      display: block;
+      background-color: var(--white);
+      height: fnc.rem(2);
+      width: fnc.rem(20);
+      transform-origin: fnc.rem(2);
+      transition: all 350ms ease-in-out;
+
+      &:not(:last-child) {
+        margin-bottom: fnc.rem(4);
+      }
     }
 
-    &__slides {        
-        display: flex;        
-        width: 300%;
-        transition: all 250ms ease-in-out;
+    &.open {
+      span {
+        background-color: var(--darkGray);
+        border-radius: fnc.rem(3);
+
+        &:first-child {
+          transform: rotate(48deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:last-child {
+          transform: rotate(-48deg);
+        }
+      }
+    }
+  }
+
+  .overlay {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1;
+    animation: fade-out 350ms ease-in-out forwards;
+
+    &.open {
+      visibility: visible;
+      animation: fade-in 350ms ease-in-out forwards;
+      @include mix.breakpoint-up(large) {
+        display: none;
+      }
     }
 
-    &__slide {        
-        min-height: fnc.rem(360);
-        width: 100%;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-
-        &#slide1 {
-            background-image: url(images/mobile-image-hero-1.jpg);        
-        }
-        &#slide2 {
-            background-image: url(images/mobile-image-hero-2.jpg);        
-        }
-        &#slide3 {
-            background-image: url(images/mobile-image-hero-3.jpg);        
-        }
-
-        @include mix.breakpoint-up(large) {
-            min-height: fnc.rem(534);
-
-            &#slide1 {
-                background-image: url(images/desktop-image-hero-1.jpg);        
-            }
-            &#slide2 {
-                background-image: url(images/desktop-image-hero-2.jpg);        
-            }
-            &#slide3 {
-                background-image: url(images/desktop-image-hero-3.jpg);        
-            }
-
-        }
-    }
-    //End of Slider Styles
-
-    &__nav {
-        @include mix.breakpoint-up(large) {
-            display: flex;
-            align-items: center;
-            gap: fnc.rem(55);
-            padding: 0;
-        }
-    }
-
-    &__logo {
-        text-align: center;
-
-        @include mix.breakpoint-up(large) {
-            text-align: left;
-        }
-    }
-
-    //Mobile items Start
-    &__toggle {
-        position: absolute;
-        top: fnc.rem(40);
-        z-index: 3;
-        cursor: pointer;
-        background: transparent;
-        appearance: none;
-        border: none;
-        width: 2rem;
-        height: 2rem;
-        
-        
-        span {
-            display: block;
-            background-color: var(--white);
-            height: fnc.rem(2);
-            width: fnc.rem(20);
-            transform-origin: fnc.rem(2);
-            transition: all 250ms ease-in-out;
-            
-            &:not(:last-child) {
-                margin-bottom: fnc.rem(4);
-            }
-        }
-        
-        &.open {
-            span {
-                background-color: var(--darkGray);
-                border-radius: fnc.rem(3);
-                
-                &:first-child {
-                    transform: rotate(48deg);
-                }
-                
-                &:nth-child(2) {
-                    opacity: 0;
-                }
-                
-                &:last-child {
-                    transform: rotate(-48deg);
-                }
-                
-            }
-        }
-        
-    }
-    
-    .overlay {
+    //From The Coder Coder
+    @keyframes fade-in {
+      from {
         visibility: hidden;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.75);
-        z-index: 1;
-        animation: fade-out 250ms ease-in-out forwards;
-        
-        &.open {
-            visibility: visible;
-            animation: fade-in 250ms ease-in-out forwards;
-            @include mix.breakpoint-up(large) {
-                display: none;
-            }
-        }
-        
-        //From The Coder Coder
-        @keyframes fade-in {
-            from {
-                visibility: hidden;
-                opacity: 0;
-            }
-            1% {
-                visibility: visible;
-                opacity: 0;
-            }
-            to {
-                visibility: visible;
-                opacity: 1;
-            }
-        }
-        
-        @keyframes fade-out {
-            from {
-                visibility: visible;
-                opacity: 1;
-            }
-            99% {
-                visibility: visible;
-                opacity: 0;
-            }
-            to {
-                visibility: hidden;
-                opacity: 0;
-            }
-        }
-        
+        opacity: 0;
+      }
+      1% {
+        visibility: visible;
+        opacity: 0;
+      }
+      to {
+        visibility: visible;
+        opacity: 1;
+      }
     }
-    
-    &__menu {
-        position: absolute;
-        left: 0;
-        top: -100%;
-        z-index: 2;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        padding: 0 fnc.rem(24);
-        background-color: var(--white);
-        height: fnc.rem(111);
-        width: 100%;
-        transition: all 250ms ease-in-out;
-        
-        &.open {
-            top: 0;
-            @include mix.breakpoint-up(large) {
-                display: none;
-            }
+
+    @keyframes fade-out {
+      from {
+        visibility: visible;
+        opacity: 1;
+      }
+      99% {
+        visibility: visible;
+        opacity: 0;
+      }
+      to {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    left: 0;
+    top: -100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 fnc.rem(24);
+    background-color: var(--white);
+    height: fnc.rem(111);
+    width: 100%;
+    transition: all 350ms ease-in-out;
+
+    &.open {
+      top: 0;
+      @include mix.breakpoint-up(large) {
+        display: none;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin-left: 0;
+    }
+
+    li {
+      display: inline;
+      &:not(:last-child) {
+        margin-right: fnc.rem(33);
+      }
+    }
+
+    a {
+      color: var(--black);
+      font-weight: 700;
+      text-transform: lowercase;
+    }
+  }
+  //End of Mobile Items
+
+  &__links {
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        display: inline;
+
+        &:not(:last-child) {
+          margin-right: fnc.rem(33);
         }
-        
-        ul {
-            list-style: none;
-            margin-left: 0;
-        }
-        
-        li {
-            display: inline;
-            &:not(:last-child) {
-                margin-right: fnc.rem(33);
-            }
-        }
-        
+
         a {
-            color: var(--black);
-            font-weight: 700;
-            text-transform: lowercase;            
+          color: var(--white);
+          text-transform: lowercase;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            background-color: var(--white);
+            width: fnc.rem(16);
+            height: fnc.rem(2);
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: fnc.rem(-11);
+            opacity: 0;
+            transition: opacity 350ms ease-in-out;
+          }
+
+          &:hover::after {
+            opacity: 1;
+          }
         }
+      }
     }
-    //End of Mobile Items
+  }
 
+  &__slide-control {
+    position: absolute;
+    right: fnc.rem(-160);
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--black);
+    width: fnc.rem(112);
+    height: fnc.rem(56);
 
-    &__links {
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-    
-            li {
-                display: inline;
-
-                &:not(:last-child) {
-                    margin-right: fnc.rem(33);
-                }
-
-
-                a {
-                    color: var(--white);
-                    text-transform: lowercase;                    
-                }
-
-
-            }
-        }
-        
-        
+    @include mix.breakpoint-down(medium) {
+      right: 0;
     }
-    
-    &__slide-control {
-        position: absolute;
-        right: fnc.rem(-160);
-        bottom: 0;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;        
-        background-color: var(--black);
-        width: fnc.rem(112);
-        height: fnc.rem(56);
-        
-        @include mix.breakpoint-down(large){
-            right: 0;
-        }
-        
-        @include mix.breakpoint-up(large) {
-            height: fnc.rem(80);
-            width: fnc.rem(160);
-        }
-        
 
-        button {
-            background: transparent;
-            border: none;
-            appearance: none;
-            height: 100%;
-            width: 100%;
-            cursor: pointer;
-        }
-
-        img {
-            height: fnc.rem(18);
-        }
-
+    @include mix.breakpoint-up(large) {
+      height: fnc.rem(80);
+      width: fnc.rem(160);
     }
+
+    button {
+      background: transparent;
+      border: none;
+      appearance: none;
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 350ms ease-in-out;
+
+      &:hover {
+        background-color: var(--veryDarkGray);
+      }
+    }
+
+    img {
+      height: fnc.rem(18);
+    }
+  }
 }

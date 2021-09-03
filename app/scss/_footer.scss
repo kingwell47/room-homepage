@@ -2,29 +2,48 @@
 @use "breakpoints" as mix;
 
 .footer {
+  &__image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: fnc.rem(238);
 
-    &__image1 {
-
-
+    &-first {
+      background-image: url(images/image-about-dark.jpg);
     }
 
-    &__about {
-
-
+    &-second {
+      background-image: url(images/image-about-light.jpg);
     }
 
-    &__header {
+    @include mix.breakpoint-up(medium) {
+      min-height: fnc.rem(266);
+      flex-basis: fnc.rem(420);
 
-
+      &-second {
+        flex-basis: fnc.rem(440);
+      }
     }
+  }
 
-    &__paragraph {
+  &__about {
+    flex-basis: fnc.rem(580);
+    padding-top: fnc.rem(60);
+    padding-bottom: fnc.rem(60);
 
-
+    @include mix.breakpoint-up(large) {
+      padding: fnc.rem(70) fnc.rem(47);
     }
+  }
 
-    &__image2 {
+  &__header {
+    text-transform: uppercase;
+    font-size: fnc.rem(12);
+    letter-spacing: fnc.rem(4);
+  }
 
-        
-    }
+  &__paragraph {
+    color: var(--darkGray);
+    line-height: 1.5;
+  }
 }

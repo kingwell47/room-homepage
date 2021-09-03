@@ -2,65 +2,69 @@
 @use "breakpoints" as mix;
 
 :root {
-    --darkGray: hsl(0, 0%, 63%);
-    --black: hsl(0, 0%, 0%);
-    --white: hsl(0, 0%, 100%);
-    --veryDarkGray: hsl(0, 0%, 27%);
+  --darkGray: hsl(0, 0%, 63%);
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+  --veryDarkGray: hsl(0, 0%, 27%);
 
-    //font
-    --font: 'Spartan', sans-serif;
+  //font
+  --font: "Spartan", sans-serif;
 }
 
 html {
-    font-size: 100%;
-    box-sizing: border-box;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-*, *::before, *::after {
-    box-sizing: inherit;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    font-family: var(--font);
-    font-size: fnc.rem(12);
+  padding: 0;
+  margin: 0;
+  font-family: var(--font);
+  font-size: fnc.rem(12);
 
-    &.open {
-        overflow: hidden;
-    }
+  &.open {
+    overflow: hidden;
+  }
 }
 
-a, a:hover, a:active {
-    text-decoration: none;
+a,
+a:hover,
+a:active {
+  text-decoration: none;
 }
 
 //Visibility
 .hide-for-mobile {
-    //hide for tablet or mobile
-    @include mix.breakpoint-down(medium) {
-        display: none;
-    }
+  //hide for tablet or mobile
+  @include mix.breakpoint-down(medium) {
+    display: none;
+  }
 }
 
 .hide-for-desktop {
-    //hide for desktop or laptop
-    @include mix.breakpoint-up(large) {
-        display: none;
-    }
+  //hide for desktop or laptop
+  @include mix.breakpoint-up(large) {
+    display: none;
+  }
 }
 
 .container {
-    padding: 0 fnc.rem(24);
+  padding: 0 fnc.rem(24);
 }
 
 .limit-wrapper {
-    max-width: fnc.rem(1440);
-    margin: 0 auto;
+  max-width: fnc.rem(1440);
+  margin: 0 auto;
+  overflow: hidden;
 
-    @include mix.breakpoint-up(large) {
-       display: flex;
-       justify-content: center;
-    }
-
+  @include mix.breakpoint-up(large) {
+    display: flex;
+    justify-content: center;
+  }
 }

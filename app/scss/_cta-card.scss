@@ -1,68 +1,86 @@
 @use "functions" as fnc;
 @use "breakpoints" as mix;
 
-
 .cta {
-    max-width: fnc.rem(600);
-    max-height: fnc.rem(534);
-    
-    &__slider {
-        width: 100%;
-        overflow: hidden;
-    }
-    
-    &__slides {
-        display: flex;
-        width: 300%;
-        transition: all 250ms ease-in-out;
-    }
+  max-height: fnc.rem(534);
+  margin: 0 auto;
 
+  @include mix.breakpoint-up(large) {
+    max-width: fnc.rem(600);
+  }
+
+  &__slider {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__slides {
+    display: flex;
+    width: 300%;
+    transition: all 350ms ease-in-out;
+  }
 }
 
-
 .cta-card {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    padding-top: fnc.rem(73);
-    padding-bottom: fnc.rem(73);
+  padding-top: fnc.rem(73);
+  padding-bottom: fnc.rem(73);
+
+  @include mix.breakpoint-up(large) {
+    padding-left: fnc.rem(96);
+    padding-right: fnc.rem(90);
+  }
+
+  &__heading {
+    font-size: fnc.rem(27);
+    margin-top: 0;
+    margin-bottom: fnc.rem(5);
+    font-weight: 600;
 
     @include mix.breakpoint-up(large) {
-        padding: fnc.rem(96);
-        
+      font-size: fnc.rem(38);
+    }
+  }
+
+  &__paragraph {
+    color: var(--darkGray);
+    line-height: 1.6;
+    margin-bottom: fnc.rem(57);
+  }
+
+  &__link {
+    display: flex;
+    align-items: flex-start;
+    gap: fnc.rem(23);
+    text-transform: uppercase;
+    letter-spacing: fnc.rem(12);
+    font-weight: 600;
+    color: var(--black);
+    transition: color 250ms ease-in-out;
+
+    @include mix.breakpoint-down(small) {
+      align-self: flex-start;
     }
 
-    &__heading {
-        font-size: fnc.rem(27);
-        margin-top: 0;
-        margin-bottom: fnc.rem(5);
-        font-weight: 600;
-
-        @include mix.breakpoint-up(large) {
-            font-size: fnc.rem(38);
-        }
-
+    @include mix.breakpoint-up(large) {
+      align-self: flex-start;
     }
 
-    &__paragraph {
-        color: var(--darkGray);
-        line-height: 1.6;
-        margin-bottom: fnc.rem(57);
-
+    path {
+      transition: fill 250ms ease-in-out;
     }
 
-    &__link {
-        display: flex;
-        align-items: flex-start;
-        align-self: flex-start;
-        gap: fnc.rem(23);
-        text-transform: uppercase;
-        letter-spacing: fnc.rem(12);
-        font-weight: 600;
-        color: var(--black);
-         
+    &:hover {
+      color: var(--darkGray);
+
+      path {
+        fill: var(--darkGray);
+      }
     }
+  }
 }

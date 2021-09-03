@@ -1,181 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Room homepage</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="dist/style.css">
-  <script src="dist/script.js" defer></script>
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <div class="limit-wrapper">
-    <header class="header">
-    
-    <div class="header__slider">
-      <div class="header__slides">
-        <div class="header__slide" id="slide1"></div>
-        <div class="header__slide" id="slide2"></div>
-        <div class="header__slide" id="slide3"></div>
-      </div>
-    </div>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-    <nav class="header__nav container">
-      <div class="header__logo">
-        <img src="images/logo.svg" alt="Room" class="header__logo">
-      </div>
-      
-
-      <button class="header__toggle hide-for-desktop" title="mobile menu" aria-label="open-menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <div class="overlay">
-      </div>
-      
-      <div class="header__menu hide-for-desktop" aria-label="mobile-links">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="header__links hide-for-mobile" aria-label="links">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-      
-    </nav>
-    
-    <div class="header__slide-control">
-      <button class="arrow-left" title="previous slide">
-        <img src="images/icon-angle-left.svg" alt="">
-      </button>
-      <button class="arrow-right" title="next slide">
-        <img src="images/icon-angle-right.svg" alt="">
-      </button>
-    </div>
-
-  </header>
-
-  <main>
-    <div class="cta">
-      <div class="cta__slider">
-        <div class="cta__slides">
-          <div class="cta-card container">
-            <h1 class="cta-card__heading">
-              Discover innovative ways to decorate
-            </h1>
-            <p class="cta-card__paragraph">
-              We provide unmatched quality, comfort, and style for property owners across the country. 
-              Our experts combine form and function in bringing your vision to life. Create a room in your 
-              own style with our collection and make your property a reflection of you and what you love.
-            </p>
-            <a href="#" class="cta-card__link">
-              <span>
-                Shop now
-              </span>
-              <img src="images/icon-arrow.svg" alt="">
-            </a>
+    <title>Frontend Mentor | Room homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/style.css" />
+    <script src="dist/script.js" defer></script>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="limit-wrapper">
+      <header class="header">
+        <div class="header__slider">
+          <div class="header__slides">
+            <div class="header__slide" id="slide1"></div>
+            <div class="header__slide" id="slide2"></div>
+            <div class="header__slide" id="slide3"></div>
           </div>
-  
-          <div class="cta-card container">
-            <h1 class="cta-card__heading">
-              We are available all across the globe
-            </h1>
-            <p class="cta-card__paragraph">
-              With stores all over the world, it's easy for you to find furniture for your home or place of business. 
-              Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
-              store locator. Any questions? Don't hesitate to contact us today.
-            </p>
-            <a href="#" class="cta-card__link">
-              <span>
-                Shop now
-              </span>
-              <img src="images/icon-arrow.svg" alt="">
-            </a>
-          </div>
-  
-          <div class="cta-card container">
-            <h1 class="cta-card__heading">
-              Manufactured with the best materials
-            </h1>
-            <p class="cta-card__paragraph">
-              Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
-              to ensure that every product is made as perfect and as consistent as possible. With three decades of 
-              experience in this industry, we understand what customers want for their home and office.
-            </p>
-            <a href="#" class="cta-card__link">
-              <span>
-                Shop now
-              </span>
-              <img src="images/icon-arrow.svg" alt="">
-            </a>
-          </div>
-  
         </div>
+
+        <nav class="header__nav container">
+          <div class="header__logo">
+            <img src="images/logo.svg" alt="Room" class="header__logo" />
+          </div>
+
+          <button
+            class="header__toggle hide-for-desktop"
+            title="mobile menu"
+            aria-label="open-menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="overlay"></div>
+
+          <div class="header__menu hide-for-desktop" aria-label="mobile-links">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="header__links hide-for-mobile" aria-label="links">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="header__slide-control">
+          <button class="arrow-left" title="Previous">
+            <img src="images/icon-angle-left.svg" alt="" />
+          </button>
+          <button class="arrow-right" title="Next">
+            <img src="images/icon-angle-right.svg" alt="" />
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <div class="cta">
+          <div class="cta__slider">
+            <div class="cta__slides">
+              <div class="cta-card container">
+                <h1 class="cta-card__heading">
+                  Discover innovative ways to decorate
+                </h1>
+                <p class="cta-card__paragraph">
+                  We provide unmatched quality, comfort, and style for property
+                  owners across the country. Our experts combine form and
+                  function in bringing your vision to life. Create a room in
+                  your own style with our collection and make your property a
+                  reflection of you and what you love.
+                </p>
+                <a href="#" class="cta-card__link">
+                  <span> Shop now </span>
+                  <svg
+                    width="40"
+                    height="12"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+                      fill="#000"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                </a>
+              </div>
+
+              <div class="cta-card container">
+                <h1 class="cta-card__heading">
+                  We are available all across the globe
+                </h1>
+                <p class="cta-card__paragraph">
+                  With stores all over the world, it's easy for you to find
+                  furniture for your home or place of business. Locally, we’re
+                  in most major cities throughout the country. Find the branch
+                  nearest you using our store locator. Any questions? Don't
+                  hesitate to contact us today.
+                </p>
+                <a href="#" class="cta-card__link">
+                  <span> Shop now </span>
+                  <svg
+                    width="40"
+                    height="12"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+                      fill="#000"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                </a>
+              </div>
+
+              <div class="cta-card container">
+                <h1 class="cta-card__heading">
+                  Manufactured with the best materials
+                </h1>
+                <p class="cta-card__paragraph">
+                  Our modern furniture store provide a high level of quality.
+                  Our company has invested in advanced technology to ensure that
+                  every product is made as perfect and as consistent as
+                  possible. With three decades of experience in this industry,
+                  we understand what customers want for their home and office.
+                </p>
+                <a href="#" class="cta-card__link">
+                  <span> Shop now </span>
+                  <svg
+                    width="40"
+                    height="12"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+                      fill="#000"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer class="footer limit-wrapper">
+      <div class="footer__image footer__image-first"></div>
+      <div class="footer__about container">
+        <h2 class="footer__header">About our furniture</h2>
+        <p class="footer__paragraph">
+          Our multifunctional collection blends design and function to suit your
+          individual taste. Make each room unique, or pick a cohesive theme that
+          best express your interests and what inspires you. Find the furniture
+          pieces you need, from traditional to contemporary styles or anything
+          in between. Product specialists are available to help you create your
+          dream space.
+        </p>
       </div>
+      <div class="footer__image footer__image-second"></div>
+    </footer>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.kingwell47.com" target="_blank">Joel P. Doctor</a>.
     </div>
-
-  </main>
-</div>
-
-  <footer class="footer">
-    <div class="footer_image1">
-
-    </div>
-    <div class="footer__about container">
-      <h2 class="footer__about">
-        About our furniture
-      </h2>
-      <p class="footer__paragraph">
-        Our multifunctional collection blends design and function to suit your individual taste.
-        Make each room unique, or pick a cohesive theme that best express your interests and what
-        inspires you. Find the furniture pieces you need, from traditional to contemporary styles
-        or anything in between. Product specialists are available to help you create your dream space.
-      </p>
-    </div>
-    <div class="footer__image2">
-
-    </div>
-  </footer>
-  
-
-
-  
-
-
-
-
-  
-
-  
-  
-  
-  
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  </body>
 </html>
