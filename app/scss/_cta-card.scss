@@ -28,7 +28,7 @@
   justify-content: center;
   align-items: center;
 
-  padding-top: fnc.rem(73);
+  padding-top: fnc.rem(118);
   padding-bottom: fnc.rem(73);
 
   @include mix.breakpoint-up(large) {
@@ -40,7 +40,6 @@
     font-size: fnc.rem(27);
     margin-top: 0;
     margin-bottom: fnc.rem(5);
-    font-weight: 600;
 
     @include mix.breakpoint-up(large) {
       font-size: fnc.rem(38);

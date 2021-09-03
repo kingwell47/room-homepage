@@ -330,7 +330,7 @@ a:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 4.5625rem;
+  padding-top: 7.375rem;
   padding-bottom: 4.5625rem;
 }
 @media (min-width: 75em) {
@@ -343,7 +343,6 @@ a:active {
   font-size: 1.6875rem;
   margin-top: 0;
   margin-bottom: 0.3125rem;
-  font-weight: 600;
 }
 @media (min-width: 75em) {
   .cta-card__heading {
@@ -418,7 +417,7 @@ a:active {
 }
 .footer__header {
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   letter-spacing: 0.25rem;
 }
 .footer__paragraph {
