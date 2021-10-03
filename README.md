@@ -1,4 +1,6 @@
-# Frontend Mentor - Room homepage solution
+# Room Homepage
+
+## Frontend Mentor - Room homepage solution
 
 This is a solution to the [Room homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/room-homepage-BtdBY_ENq). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
@@ -27,6 +29,10 @@ Users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Navigate the slider using either their mouse/trackpad or keyboard
+
+Additional things I did:
+
+- The slider automatically slides forward after a set interval.
 
 ### Screenshot
 
@@ -80,7 +86,7 @@ function navigateSlides() {
 
 ### Continued development
 
-Looking for a way to restart the automated sliding after a delay.
+It's possible that there is a better way of implementing sliding images as I've seen a lot of different ways to do it in the course of figuring out this solution.
 
 ### Useful resources
 
@@ -89,7 +95,7 @@ Looking for a way to restart the automated sliding after a delay.
 
 ## Author
 
-- Website - [Joel P. Doctor](https://www.kingwell47.com) - Currently made using SquareSpace, I will migrate it once I make my own site.
+- Website - [Joel P. Doctor](https://joeldoctor.com/)
 - Frontend Mentor - [@kingwell47](https://www.frontendmentor.io/profile/kingwell47)
 - Twitter - [@kingwell47](https://www.twitter.com/kingwell47)
 - LinkedIn - [Joel P. Doctor](https://www.linkedin.com/in/joel-d-05854919/)
